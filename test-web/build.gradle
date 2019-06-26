@@ -82,3 +82,6 @@ task mybatisGenerate << {
     ant.mbgenerator(overwrite: false,  configfile: 'src/main/resources/mybatis/config/generatorConfig.xml', verbose: true) {
     }
 }
+task stage() {
+    dependsOn clean, bootJar
+}
