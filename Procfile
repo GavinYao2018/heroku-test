@@ -1,1 +1,1 @@
-web: java -jar target/test-web-1.0-SNAPSHOT.jar
+web java -Dserver.port=$PORT $JAVA_OPTS -jar target/yao-test-0.0.1-SNAPSHOT.jar
