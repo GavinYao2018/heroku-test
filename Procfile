@@ -1,1 +1,1 @@
-web: java -jar test-web/build/libs/yao-test-0.0.1-SNAPSHOT.jar
+web: java -jar test-web/build/libs/test-web-1.0-SNAPSHOT.jar
