@@ -1,0 +1,1 @@
+web: java -jar target/test-web-1.0-SNAPSHOT.jar
