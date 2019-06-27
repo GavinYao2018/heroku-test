@@ -1,1 +1,1 @@
-web: java -jar test-web/build/libs/test-web-1.0-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar test-web/build/libs/test-web-1.0-SNAPSHOT.jar
