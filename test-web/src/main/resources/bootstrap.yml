@@ -1,5 +1,3 @@
-server:
-  port: ${PROT:8080}
 spring:
   application:
       name: heroku-test
