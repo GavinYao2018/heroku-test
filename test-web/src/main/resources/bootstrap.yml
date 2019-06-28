@@ -1,6 +1,10 @@
 spring:
   application:
       name: heroku-test
+  mvc:
+    static-path-pattern: /**
+#  freemarker:
+#    request-context-attribute: request
 
 jdbc:
   postgresql:

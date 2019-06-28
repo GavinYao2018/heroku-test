@@ -1,0 +1,22 @@
+<html lang="zh-CN">
+<head>
+    <title>hello</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function setTime() {
+            setInterval(function () {
+                $("#now").text(new Date());
+            }, 1000);
+        }
+
+        $(document).ready(setTime);
+    </script>
+</head>
+<body>
+<h1>hello</h1>
+<span id="now"></span>
+</body>
+</html>
