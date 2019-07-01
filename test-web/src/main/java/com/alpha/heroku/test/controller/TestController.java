@@ -3,15 +3,15 @@ package com.alpha.heroku.test.controller;
 import com.alpha.heroku.test.bo.PageBO;
 import com.alpha.heroku.test.bo.PageParamBO;
 import com.alpha.heroku.test.bo.ResponseBO;
-import com.alpha.heroku.test.entity.MyFirst;
-import com.alpha.heroku.test.mapper.MyFirstMapper;
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
+import com.alpha.heroku.test.entity.SessionC;
+import com.alpha.heroku.test.service.SessionService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Date;
 
 /**
  * @Author huiyan.yao
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @Slf4j
 public class TestController {
-    @Autowired
-    private MyFirstMapper myFirstMapper;
 
+    @Autowired
+    private SessionService sessionService;
 
     @GetMapping("/test")
     @ResponseBody
@@ -32,23 +32,23 @@ public class TestController {
 
     @GetMapping("/list")
     @ResponseBody
-    public ResponseBO<PageBO<MyFirst>> list(PageParamBO pageParamBO) {
-        PageHelper.startPage(pageParamBO.getPageIndex(), pageParamBO.getPageSize());
-        Page page = (Page) myFirstMapper.selectByExample(null);
-        PageBO<MyFirst> pageBO = new PageBO<>(page, MyFirst.class);
-
+    public ResponseBO<PageBO<SessionC>> list(PageParamBO pageParamBO) {
+        PageBO<SessionC> pageBO = sessionService.getAll(pageParamBO);
         return new ResponseBO<>(pageBO);
     }
 
     @GetMapping("/add")
     @ResponseBody
     public ResponseBO<Void> add() {
-        MyFirst book = new MyFirst();
-        book.setGroupName("yao" + String.valueOf(System.currentTimeMillis()));
-        book.setFirstName("query" + String.valueOf(System.currentTimeMillis()));
-        myFirstMapper.insertSelective(book);
+        SessionC session = new SessionC();
+        session.setName("马修" + String.valueOf(System.currentTimeMillis()));
+        session.setLevelC("Advanced");
+        session.setDescriptionC("马修要好好学！" + String.valueOf(System.currentTimeMillis()));
+        session.setIsdeleted(Boolean.FALSE);
+        session.setCreateddate(new Date());
+        session.setSessionDateC(new Date());
+        sessionService.add(session);
 
-        log.info("对象插入完毕：{}", book);
         return new ResponseBO<>();
     }
 }

@@ -6,13 +6,13 @@ spring:
 #  freemarker:
 #    request-context-attribute: request
 
-jdbc:
-  postgresql:
-    url: jdbc:postgresql://ec2-54-243-147-162.compute-1.amazonaws.com:5432/d8c1a7fa7ihqal?sslmode=require
-    username: dkyzpsuabsvsqi
-    password: 5a5ee736813b3535790a48333b8bf1cb96c2aa8b34edf12d7657903085a44bc1
-    driver: org.postgresql.Driver
 
+#jdbc:
+#  postgresql:
+#    url: jdbc:postgresql://ec2-174-129-227-80.compute-1.amazonaws.com:5432/d2974qivb373ov?sslmode=require
+#    username: aochdhrpaqltzi
+#    password: 9e77d96469ef02e2b39f2c69945257fbe93811edae910f036b2869ed7536e70a
+#    driver: org.postgresql.Driver
 
 #jdbc:
 #  postgresql:
@@ -20,6 +20,7 @@ jdbc:
 #    username: postgres
 #    password: 123321
 #    driver: org.postgresql.Driver
+
 
 # mybatis
 mybatis:

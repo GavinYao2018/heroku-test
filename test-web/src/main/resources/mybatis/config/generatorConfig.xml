@@ -13,8 +13,8 @@
         </plugin>
 
         <jdbcConnection driverClass="org.postgresql.Driver"
-                        connectionURL="jdbc:postgresql://ec2-54-243-147-162.compute-1.amazonaws.com:5432/d8c1a7fa7ihqal?sslmode=require"
-                        userId="dkyzpsuabsvsqi" password="5a5ee736813b3535790a48333b8bf1cb96c2aa8b34edf12d7657903085a44bc1">
+                        connectionURL="jdbc:postgresql://ec2-174-129-227-80.compute-1.amazonaws.com:5432/d2974qivb373ov?sslmode=require"
+                        userId="aochdhrpaqltzi" password="9e77d96469ef02e2b39f2c69945257fbe93811edae910f036b2869ed7536e70a">
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="com.alpha.heroku.test.entity" targetProject="src/main/java">
@@ -26,7 +26,9 @@
 
         <javaClientGenerator targetPackage="com.alpha.heroku.test.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
-        <table tableName="my_first" />
+        <table tableName="speaker__c" />
+        <table tableName="session__c" />
+        <table tableName="session_speaker__c" />
 
     </context>
 </generatorConfiguration>

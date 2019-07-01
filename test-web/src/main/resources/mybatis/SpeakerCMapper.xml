@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alpha.heroku.test.mapper.SpeakerCMapper" >
+  <resultMap id="BaseResultMap" type="com.alpha.heroku.test.entity.SpeakerC" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="email__c" property="emailC" jdbcType="VARCHAR" />
+    <result column="first_name__c" property="firstNameC" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="last_name__c" property="lastNameC" jdbcType="VARCHAR" />
+    <result column="isdeleted" property="isdeleted" jdbcType="BIT" />
+    <result column="systemmodstamp" property="systemmodstamp" jdbcType="TIMESTAMP" />
+    <result column="createddate" property="createddate" jdbcType="TIMESTAMP" />
+    <result column="bio__c" property="bioC" jdbcType="VARCHAR" />
+    <result column="picture_path__c" property="picturePathC" jdbcType="VARCHAR" />
+    <result column="sfid" property="sfid" jdbcType="VARCHAR" />
+    <result column="_hc_lastop" property="hcLastop" jdbcType="VARCHAR" />
+    <result column="_hc_err" property="hcErr" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
