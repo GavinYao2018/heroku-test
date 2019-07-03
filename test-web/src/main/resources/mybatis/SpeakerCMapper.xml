@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.alpha.heroku.test.mapper.SpeakerCMapper" >
-  <resultMap id="BaseResultMap" type="com.alpha.heroku.test.entity.SpeakerC" >
+  <resultMap id="BaseResultMap" type="com.alpha.heroku.test.entity.salesforce.SpeakerC" >
     <!--
       WARNING - @mbg.generated
     -->
@@ -18,5 +18,6 @@
     <result column="sfid" property="sfid" jdbcType="VARCHAR" />
     <result column="_hc_lastop" property="hcLastop" jdbcType="VARCHAR" />
     <result column="_hc_err" property="hcErr" jdbcType="VARCHAR" />
+    <result column="hc_extend_id__c" property="hcExtendIdC" jdbcType="VARCHAR" />
   </resultMap>
 </mapper>

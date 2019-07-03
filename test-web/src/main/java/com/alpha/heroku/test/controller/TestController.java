@@ -3,8 +3,9 @@ package com.alpha.heroku.test.controller;
 import com.alpha.heroku.test.bo.PageBO;
 import com.alpha.heroku.test.bo.PageParamBO;
 import com.alpha.heroku.test.bo.ResponseBO;
-import com.alpha.heroku.test.entity.SessionC;
+import com.alpha.heroku.test.entity.salesforce.SessionC;
 import com.alpha.heroku.test.service.SessionService;
+import com.alpha.heroku.test.utils.uuid.UUIDUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,15 +41,7 @@ public class TestController {
     @GetMapping("/add")
     @ResponseBody
     public ResponseBO<Void> add() {
-        SessionC session = new SessionC();
-        session.setName("马修" + String.valueOf(System.currentTimeMillis()));
-        session.setLevelC("Advanced");
-        session.setDescriptionC("马修要好好学！" + String.valueOf(System.currentTimeMillis()));
-        session.setIsdeleted(Boolean.FALSE);
-        session.setCreateddate(new Date());
-        session.setSessionDateC(new Date());
-        sessionService.add(session);
-
+        sessionService.add();
         return new ResponseBO<>();
     }
 }

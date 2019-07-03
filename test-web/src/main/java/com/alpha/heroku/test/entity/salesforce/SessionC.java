@@ -1,4 +1,4 @@
-package com.alpha.heroku.test.entity;
+package com.alpha.heroku.test.entity.salesforce;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Data
-@Table(name = "session__c", schema = "salesforce")
+@Table(name = "salesforce.session__c")
 public class SessionC {
     @Id
     private Integer id;
@@ -35,4 +35,7 @@ public class SessionC {
 
     @Column(name = "_hc_err")
     private String hcErr;
+
+    @Column(name = "hc_extend_id__c")
+    private String hcExtendIdC;
 }

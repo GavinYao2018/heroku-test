@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.alpha.heroku.test.mapper.SessionSpeakerCMapper" >
-  <resultMap id="BaseResultMap" type="com.alpha.heroku.test.entity.SessionSpeakerC" >
+  <resultMap id="BaseResultMap" type="com.alpha.heroku.test.entity.salesforce.SessionSpeakerC" >
     <!--
       WARNING - @mbg.generated
     -->
     <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="createddate" property="createddate" jdbcType="TIMESTAMP" />
-    <result column="isdeleted" property="isdeleted" jdbcType="BIT" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="systemmodstamp" property="systemmodstamp" jdbcType="TIMESTAMP" />
-    <result column="session__c" property="sessionC" jdbcType="VARCHAR" />
     <result column="speaker__c" property="speakerC" jdbcType="VARCHAR" />
+    <result column="session__r__hc_extend_id__c" property="sessionRHcExtendIdC" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="session__c" property="sessionC" jdbcType="VARCHAR" />
+    <result column="isdeleted" property="isdeleted" jdbcType="BIT" />
+    <result column="systemmodstamp" property="systemmodstamp" jdbcType="TIMESTAMP" />
+    <result column="speaker__r__hc_extend_id__c" property="speakerRHcExtendIdC" jdbcType="VARCHAR" />
+    <result column="createddate" property="createddate" jdbcType="TIMESTAMP" />
     <result column="sfid" property="sfid" jdbcType="VARCHAR" />
     <result column="_hc_lastop" property="hcLastop" jdbcType="VARCHAR" />
     <result column="_hc_err" property="hcErr" jdbcType="VARCHAR" />

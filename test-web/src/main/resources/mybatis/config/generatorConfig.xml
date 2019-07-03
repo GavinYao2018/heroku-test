@@ -26,9 +26,9 @@
 
         <javaClientGenerator targetPackage="com.alpha.heroku.test.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
 
-        <table tableName="speaker__c" />
-        <table tableName="session__c" />
-        <table tableName="session_speaker__c" />
+        <!--<table schema="salesforce" tableName="speaker__c"/>-->
+        <!--<table schema="salesforce" tableName="session__c" />-->
+        <table schema="salesforce" tableName="session_speaker__c" />
 
     </context>
 </generatorConfiguration>
